@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+
+<body>
+  <div class="container">
+    <ul class="nav bg-info rounded-pill p-2 mb-4 align-items-center">
+      <li class="nav-item">
+        <a class="nav-link text-light fw-bold" href="/">HOME</a>
+      </li>
+
+      <li class="ms-auto d-flex align-items-center">
+        <a class="btn btn-light btn-sm d-flex align-items-center me-2" href="{% url 'login' %}">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Login
+        </a>
+        <a class="btn btn-light btn-sm d-flex align-items-center" href="{% url 'register' %}">
+          <i class="bi bi-person-plus-fill me-1"></i> Sign Up
+        </a>
+      </li>
+    </ul>
+
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+<html>
+{% block title %}
+ client page
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center">Welcome to the Client Page</h2>
+        <p class="text-center mt-3">Hello, {{ user.username }}!</p>
+    </div>
+    {% endblock %}

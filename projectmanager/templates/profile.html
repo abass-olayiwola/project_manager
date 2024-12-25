@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+<html>
+{% block title %}
+ Profile
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center">Welcome, {{ user.username }}!</h2>
+        <p class="text-center mt-3">Email: {{ user.email }}</p>
+        <div class="text-center mt-4">
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'clients_page' %}" class="btn btn-primary">Clients</a>
+        </div>
+    </div>
+    {% endblock  %}
